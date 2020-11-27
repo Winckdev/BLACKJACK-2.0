@@ -1,0 +1,8 @@
+force /clk "0" 0ns, "1" 5ns, "0" 10ns, "1" 15ns, "0" 20ns, "1" 25ns, "0" 30ns, "1" 35ns, "0" 40ns, "1" 45ns, "0" 50ns, "1" 55ns
+force /reset_req "0" 0ns
+force /chipselect "1" 0ns
+force /readd "0" 0ns
+force /writee "0" 0ns
+force /addCarta "1" 35ns
+force /address "000000" 0ns 
+force /writedata "00000000" 0ns

@@ -1,0 +1,4 @@
+force /address "10000000" 1ns, "00000001" 20ns, "00000010" 40ns
+force /data "11111111" 1ns, "11111111" 20ns, "11111111" 40ns
+force /wren "1" 1ns, "0" 20ns, "1" 39ns
+force /clock "0" 0ns, "1" 1ns, "0" 19ns, "1" 20ns, "0" 21ns, "1" 40ns

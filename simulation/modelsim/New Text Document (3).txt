@@ -1,0 +1,143 @@
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details.
+
+-- ***************************************************************************
+-- This file contains a Vhdl test bench template that is freely editable to   
+-- suit user's needs .Comments are provided in each section to help the user  
+-- fill out necessary details.                                                
+-- ***************************************************************************
+-- Generated on "11/09/2020 16:34:43"
+                                                            
+-- Vhdl Test Bench template for design  :  blocoControle
+-- 
+-- Simulation tool : ModelSim-Altera (VHDL)
+-- 
+
+LIBRARY ieee;                                               
+USE ieee.std_logic_1164.all;
+--use work.pkg_Estado.all;                                
+
+ENTITY blocoControle_vhd_tst IS
+END blocoControle_vhd_tst;
+ARCHITECTURE blocoControle_arch OF blocoControle_vhd_tst IS
+-- constants
+constant PERIODO : time := 10 ns;                                                 
+-- signals
+SIGNAL clk : STD_LOGIC := '0';                                                   
+SIGNAL reset_req : STD_LOGIC;
+SIGNAL chipselect : STD_LOGIC;
+SIGNAL readd : STD_LOGIC;
+SIGNAL writee : STD_LOGIC;
+SIGNAL addCarta : STD_LOGIC;
+SIGNAL sttPontosMaiorDezesseis: STD_LOGIC;
+SIGNAL sttPontosMaiorVinte: STD_LOGIC;
+SIGNAL sttCompBaralho: STD_LOGIC;
+SIGNAL sttIMenor13: STD_LOGIC;
+SIGNAL sttAddCarta: STD_LOGIC;
+SIGNAL interrupt: STD_LOGIC;
+SIGNAL cmdSetI: STD_LOGIC;
+SIGNAL cmdResetI: STD_LOGIC;
+SIGNAL cmdSetPontos: STD_LOGIC;
+SIGNAL cmdResetPontos: STD_LOGIC;
+SIGNAL cmdMultAddress: STD_LOGIC;
+SIGNAL cmdMultBaralho: STD_LOGIC;
+SIGNAL cmdSetCarta: STD_LOGIC;
+SIGNAL cmdResetCarta: STD_LOGIC;
+SIGNAL cmdSetBaralhoI: STD_LOGIC;
+--SIGNAL testEstadoAtual: Estado;
+
+
+
+COMPONENT blocoControle
+	PORT (
+		clk: in std_logic;
+		reset_req: in std_logic; 
+		chipselect: in std_logic;
+		readd: in std_logic;
+		writee: in std_logic;
+		addCarta: in std_logic;
+		sttPontosMaiorDezesseis, sttPontosMaiorVinte, sttCompBaralho, sttIMenor13, sttAddCarta: in std_logic;
+		
+		interrupt, cmdSetI, cmdResetI, cmdSetPontos, cmdResetPontos, cmdMultAddress,
+		cmdMultBaralho, cmdSetCarta, cmdResetCarta, cmdSetBaralhoI: BUFFER std_logic
+		--testEstadoAtual: out Estado
+	);
+	
+
+END COMPONENT;
+BEGIN
+
+	clk <=  '1' after 5 ns when clk = '0' else
+        '0' after 5 ns when clk = '1';
+
+	i1 : blocoControle
+	PORT MAP (
+-- list connections between master ports and signals
+	clk => clk,
+	reset_req => reset_req,
+	chipselect => chipselect,
+	readd => readd,
+	writee => writee,
+	addCarta => addCarta,
+	interrupt => interrupt,
+	sttPontosMaiorDezesseis => sttPontosMaiorDezesseis,
+	sttPontosMaiorVinte => sttPontosMaiorVinte,
+	sttCompBaralho => sttCompBaralho,
+	sttIMenor13 => sttIMenor13,
+	sttAddCarta => sttAddCarta,
+	cmdSetI => cmdSetI,
+	cmdResetI => cmdResetI,
+	cmdSetPontos => cmdSetPontos,
+	cmdResetPontos => cmdResetPontos,
+	cmdMultAddress => cmdMultAddress,
+	cmdMultBaralho => cmdMultBaralho,
+	cmdSetCarta => cmdSetCarta,
+	cmdResetCarta => cmdResetCarta,
+	cmdSetBaralhoI => cmdSetBaralhoI
+	
+	
+	--address => address,
+	--chipselect => chipselect,
+	--readdata => readdata,
+	--writedata => writedata,
+	--testEstadoAtual => testEstadoAtual
+	);
+init : PROCESS                                               
+-- variable declarations                                     
+BEGIN                                                        
+        -- code that executes only once
+	reset_req <= '0';
+	readd <= '0';
+	sttIMenor13 <= '0';
+	chipselect <= '1';
+	writee <= '1';
+	sttCompBaralho <= '1';
+	addCarta <= '1';
+	sttPontosMaiorDezesseis <= '0';
+	sttPontosMaiorVinte <= '0';
+	sttAddCarta <= '0';
+	
+	
+	
+WAIT;                                                       
+END PROCESS init;                                           
+always : PROCESS
+-- optional sensitivity list                                  
+-- (        )                                                 
+-- variable declarations                                      
+BEGIN                                                         
+        -- code executes for every event on sensitivity list  
+WAIT;                                                        
+END PROCESS always;                                          
+END blocoControle_arch;

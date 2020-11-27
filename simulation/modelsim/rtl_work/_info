@@ -1,0 +1,480 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Arthur/Desktop/BLACKJACK/simulation/modelsim
+Eblackjack
+Z1 w1604683605
+Z2 DPx4 work 10 pkg_estado 0 22 cE^o_lzOPnbA_ldLjEgzB2
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/Users/Arthur/Desktop/BLACKJACK/Blackjack.vhd
+Z6 FC:/Users/Arthur/Desktop/BLACKJACK/Blackjack.vhd
+l0
+L221
+V`l4B;5^@f@XkW[V[WUB_:0
+!s100 8_RTe4CPD@SHaiMfXn23`0
+Z7 OV;C;10.5b;63
+31
+Z8 !s110 1604947805
+!i10b 1
+Z9 !s108 1604947805.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/Arthur/Desktop/BLACKJACK/Blackjack.vhd|
+Z11 !s107 C:/Users/Arthur/Desktop/BLACKJACK/Blackjack.vhd|
+!i113 1
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Astructural
+R2
+R3
+R4
+DEx4 work 9 blackjack 0 22 `l4B;5^@f@XkW[V[WUB_:0
+l312
+L253
+VGjTd>?glmi_ig4Lo9a8SH2
+!s100 NFQjOlHof[i``eZ[Q]4m<1
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eblococontrole
+Z14 w1604683448
+R2
+R3
+R4
+R0
+Z15 8C:/Users/Arthur/Desktop/BLACKJACK/blocoControle.vhd
+Z16 FC:/Users/Arthur/Desktop/BLACKJACK/blocoControle.vhd
+l0
+L5
+VkgaD[<g2B;@o=N6mGj_cY2
+!s100 F@@f=3c3cQ@MS0<Za^KT80
+R7
+31
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/Arthur/Desktop/BLACKJACK/blocoControle.vhd|
+Z18 !s107 C:/Users/Arthur/Desktop/BLACKJACK/blocoControle.vhd|
+!i113 1
+R12
+R13
+Afsm
+R2
+R3
+R4
+DEx4 work 13 blococontrole 0 22 kgaD[<g2B;@o=N6mGj_cY2
+l29
+L21
+Vzo3ZY12QU4`JMc0YcVn6b0
+!s100 HDVPU8oXhJUi;TioV2R]a2
+R7
+31
+R8
+!i10b 1
+R9
+R17
+R18
+!i113 1
+R12
+R13
+Eblocooperativo
+Z19 w1604690479
+Z20 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R3
+R4
+R0
+Z21 8C:/Users/Arthur/Desktop/BLACKJACK/blocoOperativo.vhd
+Z22 FC:/Users/Arthur/Desktop/BLACKJACK/blocoOperativo.vhd
+l0
+L6
+V6[oM[_2D5AeB7I3mS8kE_0
+!s100 zl>]YW9eBQdi]gP;I7:Ac2
+R7
+31
+Z23 !s110 1604947804
+!i10b 1
+Z24 !s108 1604947804.000000
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Users/Arthur/Desktop/BLACKJACK/blocoOperativo.vhd|
+Z26 !s107 C:/Users/Arthur/Desktop/BLACKJACK/blocoOperativo.vhd|
+!i113 1
+R12
+R13
+Adatapath
+R20
+R3
+R4
+DEx4 work 14 blocooperativo 0 22 6[oM[_2D5AeB7I3mS8kE_0
+l120
+L32
+VGPiLP8i7<?UYJM<X9nndf2
+!s100 ]3CZBLD:OhZDb7[kDfQMh1
+R7
+31
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R12
+R13
+Ecompigual
+Z27 w1604614225
+R20
+R3
+R4
+R0
+Z28 8C:/Users/Arthur/Desktop/BLACKJACK/CompIgual.vhd
+Z29 FC:/Users/Arthur/Desktop/BLACKJACK/CompIgual.vhd
+l0
+L5
+V?2CW<^ZKLYbaz9n>LBh@:2
+!s100 GlgNB=g=kVUO9Tn9Kg9Qz1
+R7
+31
+R23
+!i10b 1
+R24
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/Arthur/Desktop/BLACKJACK/CompIgual.vhd|
+Z31 !s107 C:/Users/Arthur/Desktop/BLACKJACK/CompIgual.vhd|
+!i113 1
+R12
+R13
+Aarch
+R20
+R3
+R4
+DEx4 work 9 compigual 0 22 ?2CW<^ZKLYbaz9n>LBh@:2
+l15
+L14
+VG_dl]HVlmE]3Yk5Fk?=JH0
+!s100 BK=NMAD0VWD4d2TUTPiA20
+R7
+31
+R23
+!i10b 1
+R24
+R30
+R31
+!i113 1
+R12
+R13
+Ecompmaior
+R27
+R20
+R3
+R4
+R0
+Z32 8C:/Users/Arthur/Desktop/BLACKJACK/CompMaior.vhd
+Z33 FC:/Users/Arthur/Desktop/BLACKJACK/CompMaior.vhd
+l0
+L5
+VXXV1mLXWmBklI;2DmA1kM3
+!s100 o;C3MoO3Pga@3RIE3Si9O1
+R7
+31
+R23
+!i10b 1
+R24
+Z34 !s90 -reportprogress|300|-93|-work|work|C:/Users/Arthur/Desktop/BLACKJACK/CompMaior.vhd|
+Z35 !s107 C:/Users/Arthur/Desktop/BLACKJACK/CompMaior.vhd|
+!i113 1
+R12
+R13
+Aarch
+R20
+R3
+R4
+DEx4 work 9 compmaior 0 22 XXV1mLXWmBklI;2DmA1kM3
+l15
+L14
+VYP_4FZCJBK8QYJNfP3nR71
+!s100 C?n[mVY?c;697Rz]HGQa61
+R7
+31
+R23
+!i10b 1
+R24
+R34
+R35
+!i113 1
+R12
+R13
+Edecrementador
+R27
+R20
+R3
+R4
+R0
+Z36 8C:/Users/Arthur/Desktop/BLACKJACK/Decrementador.vhd
+Z37 FC:/Users/Arthur/Desktop/BLACKJACK/Decrementador.vhd
+l0
+L5
+V?XNTi=E[JJkUJBG<lOG@N3
+!s100 <=Z6fGhl5OmJNkJ1SWfoZ3
+R7
+31
+R23
+!i10b 1
+R24
+Z38 !s90 -reportprogress|300|-93|-work|work|C:/Users/Arthur/Desktop/BLACKJACK/Decrementador.vhd|
+Z39 !s107 C:/Users/Arthur/Desktop/BLACKJACK/Decrementador.vhd|
+!i113 1
+R12
+R13
+Abehavioural
+R20
+R3
+R4
+DEx4 work 13 decrementador 0 22 ?XNTi=E[JJkUJBG<lOG@N3
+l17
+L16
+V7<Pg<2NE]5V;i6QC8adF:0
+!s100 aT03Me;SF25SCznn;3XXS2
+R7
+31
+R23
+!i10b 1
+R24
+R38
+R39
+!i113 1
+R12
+R13
+Eincrementador
+R27
+R20
+R3
+R4
+R0
+Z40 8C:/Users/Arthur/Desktop/BLACKJACK/Incrementador.vhd
+Z41 FC:/Users/Arthur/Desktop/BLACKJACK/Incrementador.vhd
+l0
+L5
+VQCiOV0IBaSjG>2^jZC0CA1
+!s100 ZcER7ag_:A3m;jB`L<0Q51
+R7
+31
+R23
+!i10b 1
+R24
+Z42 !s90 -reportprogress|300|-93|-work|work|C:/Users/Arthur/Desktop/BLACKJACK/Incrementador.vhd|
+Z43 !s107 C:/Users/Arthur/Desktop/BLACKJACK/Incrementador.vhd|
+!i113 1
+R12
+R13
+Abehavioural
+R20
+R3
+R4
+DEx4 work 13 incrementador 0 22 QCiOV0IBaSjG>2^jZC0CA1
+l17
+L16
+VMIZgbR5L1X]AbFJKLg?m32
+!s100 K9C8>W^:7N;SWJA16Yi?91
+R7
+31
+R23
+!i10b 1
+R24
+R42
+R43
+!i113 1
+R12
+R13
+Ememoriaram
+R27
+Z44 DPx9 altera_mf 20 altera_mf_components 0 22 gV:l9C^?PSb6]b5V?_jR@3
+R3
+R4
+R0
+Z45 8C:/Users/Arthur/Desktop/BLACKJACK/MemoriaRAM.vhd
+Z46 FC:/Users/Arthur/Desktop/BLACKJACK/MemoriaRAM.vhd
+l0
+L42
+VTEV?OPa^IC5fJoQKLEF443
+!s100 `jPQYNSj5hb7d>:oeh^OC2
+R7
+31
+R8
+!i10b 1
+R9
+Z47 !s90 -reportprogress|300|-93|-work|work|C:/Users/Arthur/Desktop/BLACKJACK/MemoriaRAM.vhd|
+Z48 !s107 C:/Users/Arthur/Desktop/BLACKJACK/MemoriaRAM.vhd|
+!i113 1
+R12
+R13
+Asyn
+R44
+R3
+R4
+DEx4 work 10 memoriaram 0 22 TEV?OPa^IC5fJoQKLEF443
+l59
+L55
+V;F4EJI7F3AaJV8HjL=`BG3
+!s100 OIHmU>B9CWez4g<j<GPYH2
+R7
+31
+R8
+!i10b 1
+R9
+R47
+R48
+!i113 1
+R12
+R13
+Emulti21
+R27
+R20
+R3
+R4
+R0
+Z49 8C:/Users/Arthur/Desktop/BLACKJACK/Multi21.vhd
+Z50 FC:/Users/Arthur/Desktop/BLACKJACK/Multi21.vhd
+l0
+L5
+V<XRc4=boLT3bj>8lJECLl3
+!s100 Rf41e66=EnebodG]?e0BR0
+R7
+31
+R23
+!i10b 1
+R24
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/Arthur/Desktop/BLACKJACK/Multi21.vhd|
+Z52 !s107 C:/Users/Arthur/Desktop/BLACKJACK/Multi21.vhd|
+!i113 1
+R12
+R13
+Aarch
+R20
+R3
+R4
+DEx4 work 7 multi21 0 22 <XRc4=boLT3bj>8lJECLl3
+l16
+L15
+Vm0U@njEPiPeX:[5PAi<2?2
+!s100 BJDF1MoFGGTPDk@N[W;QP0
+R7
+31
+R23
+!i10b 1
+R24
+R51
+R52
+!i113 1
+R12
+R13
+Ppkg_estado
+R27
+R0
+8C:/Users/Arthur/Desktop/BLACKJACK/pkg_Estado.vhd
+FC:/Users/Arthur/Desktop/BLACKJACK/pkg_Estado.vhd
+l0
+L1
+VcE^o_lzOPnbA_ldLjEgzB2
+!s100 E=[CTIzbGi<TZfj98@efh1
+R7
+31
+R8
+!i10b 1
+R9
+!s90 -reportprogress|300|-93|-work|work|C:/Users/Arthur/Desktop/BLACKJACK/pkg_Estado.vhd|
+!s107 C:/Users/Arthur/Desktop/BLACKJACK/pkg_Estado.vhd|
+!i113 1
+R12
+R13
+Eregistrador
+R27
+R20
+R3
+R4
+R0
+Z53 8C:/Users/Arthur/Desktop/BLACKJACK/registrador.vhd
+Z54 FC:/Users/Arthur/Desktop/BLACKJACK/registrador.vhd
+l0
+L5
+VE0TYmB>_2kVoBKiL>Cba]3
+!s100 CC]KC>KzTGXL?<??QFcDl2
+R7
+31
+R8
+!i10b 1
+R9
+Z55 !s90 -reportprogress|300|-93|-work|work|C:/Users/Arthur/Desktop/BLACKJACK/registrador.vhd|
+Z56 !s107 C:/Users/Arthur/Desktop/BLACKJACK/registrador.vhd|
+!i113 1
+R12
+R13
+Abehavioural
+R20
+R3
+R4
+DEx4 work 11 registrador 0 22 E0TYmB>_2kVoBKiL>Cba]3
+l22
+L19
+VfI6ifY]7<Ha2D`:H3d9O]0
+!s100 PAAD]JOi]SAB2<Un<L8Rk1
+R7
+31
+R8
+!i10b 1
+R9
+R55
+R56
+!i113 1
+R12
+R13
+Esoma2
+R27
+R20
+R3
+R4
+R0
+Z57 8C:/Users/Arthur/Desktop/BLACKJACK/Soma2.vhd
+Z58 FC:/Users/Arthur/Desktop/BLACKJACK/Soma2.vhd
+l0
+L5
+VzFe]z<8:J2[R=]KUH6_EA0
+!s100 8Jf<aXC1N74odeI89hTZK3
+R7
+31
+R23
+!i10b 1
+R24
+Z59 !s90 -reportprogress|300|-93|-work|work|C:/Users/Arthur/Desktop/BLACKJACK/Soma2.vhd|
+Z60 !s107 C:/Users/Arthur/Desktop/BLACKJACK/Soma2.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R20
+R3
+R4
+DEx4 work 5 soma2 0 22 zFe]z<8:J2[R=]KUH6_EA0
+l15
+L14
+VGKTS3[25`KgiTZ?Q;??YZ1
+!s100 ggQ4ZMeI>:WcKZgHai:dV3
+R7
+31
+R23
+!i10b 1
+R24
+R59
+R60
+!i113 1
+R12
+R13

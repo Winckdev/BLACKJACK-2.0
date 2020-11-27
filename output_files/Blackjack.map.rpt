@@ -1,0 +1,941 @@
+Analysis & Synthesis report for Blackjack
+Thu Nov 26 18:20:52 2020
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |Blackjack|blocoControle:bloco_controle|estadoAtual
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for blocoOperativo:bloco_operativo|MemoriaRAM:RAM|altsyncram:altsyncram_component|altsyncram_0vp3:auto_generated
+ 16. Parameter Settings for User Entity Instance: Top-level Entity: |Blackjack
+ 17. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo
+ 18. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|incrementador:IncI
+ 19. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|registrador:RegI
+ 20. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|CompMaior:CompIMenor13
+ 21. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|registrador:RegCarta
+ 22. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|decrementador:DecCarta
+ 23. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|Soma2:SumPontos
+ 24. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|registrador:RegPontos
+ 25. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|CompMaior:CompPontos16
+ 26. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|CompMaior:CompPontos21
+ 27. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|incrementador:IncIRAM
+ 28. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|Multi21:MultRAM
+ 29. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|Multi21:MultAddress
+ 30. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|MemoriaRAM:RAM
+ 31. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|MemoriaRAM:RAM|altsyncram:altsyncram_component
+ 32. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|CompIgual:CompBaralho
+ 33. altsyncram Parameter Settings by Entity Instance
+ 34. Port Connectivity Checks: "blocoOperativo:bloco_operativo|CompIgual:CompBaralho"
+ 35. Port Connectivity Checks: "blocoOperativo:bloco_operativo|Multi21:MultRAM"
+ 36. Port Connectivity Checks: "blocoOperativo:bloco_operativo|CompMaior:CompPontos21"
+ 37. Port Connectivity Checks: "blocoOperativo:bloco_operativo|CompMaior:CompPontos16"
+ 38. Port Connectivity Checks: "blocoOperativo:bloco_operativo|CompMaior:CompIMenor13"
+ 39. Port Connectivity Checks: "blocoOperativo:bloco_operativo"
+ 40. Port Connectivity Checks: "blocoControle:bloco_controle"
+ 41. Post-Synthesis Netlist Statistics for Top Partition
+ 42. Elapsed Time Per Partition
+ 43. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Nov 26 18:20:52 2020       ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                      ; Blackjack                                   ;
+; Top-level Entity Name              ; Blackjack                                   ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 101                                         ;
+;     Total combinational functions  ; 76                                          ;
+;     Dedicated logic registers      ; 56                                          ;
+; Total registers                    ; 56                                          ;
+; Total pins                         ; 63                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 2,048                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                            ; Blackjack          ; Blackjack          ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; Blackjack.vhd                    ; yes             ; User VHDL File               ; C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd                          ;         ;
+; Incrementador.vhd                ; yes             ; User VHDL File               ; C:/Users/Arthur/Desktop/BLACKJACK-2.0/Incrementador.vhd                      ;         ;
+; Decrementador.vhd                ; yes             ; User VHDL File               ; C:/Users/Arthur/Desktop/BLACKJACK-2.0/Decrementador.vhd                      ;         ;
+; Multi21.vhd                      ; yes             ; User VHDL File               ; C:/Users/Arthur/Desktop/BLACKJACK-2.0/Multi21.vhd                            ;         ;
+; Soma2.vhd                        ; yes             ; User VHDL File               ; C:/Users/Arthur/Desktop/BLACKJACK-2.0/Soma2.vhd                              ;         ;
+; CompMaior.vhd                    ; yes             ; User VHDL File               ; C:/Users/Arthur/Desktop/BLACKJACK-2.0/CompMaior.vhd                          ;         ;
+; CompIgual.vhd                    ; yes             ; User VHDL File               ; C:/Users/Arthur/Desktop/BLACKJACK-2.0/CompIgual.vhd                          ;         ;
+; blocoControle.vhd                ; yes             ; User VHDL File               ; C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoControle.vhd                      ;         ;
+; blocoOperativo.vhd               ; yes             ; User VHDL File               ; C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoOperativo.vhd                     ;         ;
+; registrador.vhd                  ; yes             ; User VHDL File               ; C:/Users/Arthur/Desktop/BLACKJACK-2.0/registrador.vhd                        ;         ;
+; MemoriaRAM.vhd                   ; yes             ; User Wizard-Generated File   ; C:/Users/Arthur/Desktop/BLACKJACK-2.0/MemoriaRAM.vhd                         ;         ;
+; pkg_Estado.vhd                   ; yes             ; User VHDL File               ; C:/Users/Arthur/Desktop/BLACKJACK-2.0/pkg_Estado.vhd                         ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_0vp3.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Arthur/Desktop/BLACKJACK-2.0/db/altsyncram_0vp3.tdf                 ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 101       ;
+;                                             ;           ;
+; Total combinational functions               ; 76        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 20        ;
+;     -- 3 input functions                    ; 17        ;
+;     -- <=2 input functions                  ; 39        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 49        ;
+;     -- arithmetic mode                      ; 27        ;
+;                                             ;           ;
+; Total registers                             ; 56        ;
+;     -- Dedicated logic registers            ; 56        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 63        ;
+; Total memory bits                           ; 2048      ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 64        ;
+; Total fan-out                               ; 548       ;
+; Average fan-out                             ; 2.06      ;
++---------------------------------------------+-----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |Blackjack                                   ; 76 (0)              ; 56 (0)                    ; 2048        ; 0            ; 0       ; 0         ; 63   ; 0            ; |Blackjack                                                                                                              ; Blackjack       ; work         ;
+;    |blocoControle:bloco_controle|            ; 21 (21)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoControle:bloco_controle                                                                                 ; blocoControle   ; work         ;
+;    |blocoOperativo:bloco_operativo|          ; 55 (0)              ; 24 (0)                    ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoOperativo:bloco_operativo                                                                               ; blocoOperativo  ; work         ;
+;       |CompIgual:CompBaralho|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoOperativo:bloco_operativo|CompIgual:CompBaralho                                                         ; CompIgual       ; work         ;
+;       |CompMaior:CompIMenor13|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoOperativo:bloco_operativo|CompMaior:CompIMenor13                                                        ; CompMaior       ; work         ;
+;       |CompMaior:CompPontos16|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoOperativo:bloco_operativo|CompMaior:CompPontos16                                                        ; CompMaior       ; work         ;
+;       |CompMaior:CompPontos21|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoOperativo:bloco_operativo|CompMaior:CompPontos21                                                        ; CompMaior       ; work         ;
+;       |MemoriaRAM:RAM|                       ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoOperativo:bloco_operativo|MemoriaRAM:RAM                                                                ; MemoriaRAM      ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoOperativo:bloco_operativo|MemoriaRAM:RAM|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;             |altsyncram_0vp3:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoOperativo:bloco_operativo|MemoriaRAM:RAM|altsyncram:altsyncram_component|altsyncram_0vp3:auto_generated ; altsyncram_0vp3 ; work         ;
+;       |decrementador:DecCarta|               ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoOperativo:bloco_operativo|decrementador:DecCarta                                                        ; decrementador   ; work         ;
+;       |incrementador:IncIRAM|                ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoOperativo:bloco_operativo|incrementador:IncIRAM                                                         ; incrementador   ; work         ;
+;       |registrador:RegCarta|                 ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoOperativo:bloco_operativo|registrador:RegCarta                                                          ; registrador     ; work         ;
+;       |registrador:RegI|                     ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoOperativo:bloco_operativo|registrador:RegI                                                              ; registrador     ; work         ;
+;       |registrador:RegPontos|                ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoOperativo:bloco_operativo|registrador:RegPontos                                                         ; registrador     ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                       ;
++-------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                    ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
+; blocoOperativo:bloco_operativo|MemoriaRAM:RAM|altsyncram:altsyncram_component|altsyncram_0vp3:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 8            ; --           ; --           ; 2048 ; None ;
++-------------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                      ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                          ; IP Include File ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------+-----------------+
+; Altera ; RAM: 1-PORT  ; 18.1    ; N/A          ; N/A          ; |Blackjack|blocoOperativo:bloco_operativo|MemoriaRAM:RAM ; MemoriaRAM.vhd  ;
++--------+--------------+---------+--------------+--------------+----------------------------------------------------------+-----------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Blackjack|blocoControle:bloco_controle|estadoAtual                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ;
++-------------------+------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-------------------+------------------+------------------+------------------+-------------------+------------------+------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+-------------------+------------------+------------------+
+; Name              ; estadoAtual.SL28 ; estadoAtual.SL27a ; estadoAtual.SL27 ; estadoAtual.SL26 ; estadoAtual.SL25 ; estadoAtual.SL24 ; estadoAtual.SL23 ; estadoAtual.SL22 ; estadoAtual.SL21 ; estadoAtual.SL20 ; estadoAtual.SL19 ; estadoAtual.SL18 ; estadoAtual.SL17 ; estadoAtual.SL16 ; estadoAtual.SL15 ; estadoAtual.SL14 ; estadoAtual.SL13 ; estadoAtual.SL12a ; estadoAtual.SL12 ; estadoAtual.SL11 ; estadoAtual.SL10 ; estadoAtual.SL09a ; estadoAtual.SL09 ; estadoAtual.SL08 ; estadoAtual.SL07a ; estadoAtual.SL07 ; estadoAtual.SL06 ; estadoAtual.SL05 ; estadoAtual.SL04 ; estadoAtual.SL03 ; estadoAtual.SL02 ; estadoAtual.SL01a ; estadoAtual.SL00 ; estadoAtual.SL01 ;
++-------------------+------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-------------------+------------------+------------------+------------------+-------------------+------------------+------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+-------------------+------------------+------------------+
+; estadoAtual.SL01  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ;
+; estadoAtual.SL00  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 1                ; 1                ;
+; estadoAtual.SL01a ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                 ; 0                ; 1                ;
+; estadoAtual.SL02  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL03  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL04  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL05  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL06  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL07  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL07a ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 1                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL08  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL09  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 1                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL09a ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 1                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL10  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 1                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL11  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL12  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 1                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL12a ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL13  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL14  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL15  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL16  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL17  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL18  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL19  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL20  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL21  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL22  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL23  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL24  ; 0                ; 0                 ; 0                ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL25  ; 0                ; 0                 ; 0                ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL26  ; 0                ; 0                 ; 0                ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL27  ; 0                ; 0                 ; 1                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL27a ; 0                ; 1                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
+; estadoAtual.SL28  ; 1                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                 ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
++-------------------+------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-------------------+------------------+------------------+------------------+-------------------+------------------+------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+-------------------+------------------+------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++-----------------------------------------------+----------------------------------------+
+; Register name                                 ; Reason for Removal                     ;
++-----------------------------------------------+----------------------------------------+
+; blocoControle:bloco_controle|estadoAtual.SL24 ; Stuck at GND due to stuck port data_in ;
+; blocoControle:bloco_controle|estadoAtual.SL25 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2         ;                                        ;
++-----------------------------------------------+----------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                               ;
++-----------------------------------------------+---------------------------+-----------------------------------------------+
+; Register name                                 ; Reason for Removal        ; Registers Removed due to This Register        ;
++-----------------------------------------------+---------------------------+-----------------------------------------------+
+; blocoControle:bloco_controle|estadoAtual.SL24 ; Stuck at GND              ; blocoControle:bloco_controle|estadoAtual.SL25 ;
+;                                               ; due to stuck port data_in ;                                               ;
++-----------------------------------------------+---------------------------+-----------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 56    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 48    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 23    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Blackjack|blocoControle:bloco_controle|Selector5  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Blackjack|blocoControle:bloco_controle|Selector22 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Blackjack|blocoControle:bloco_controle|Selector26 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for blocoOperativo:bloco_operativo|MemoriaRAM:RAM|altsyncram:altsyncram_component|altsyncram_0vp3:auto_generated ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                    ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                     ;
++---------------------------------+--------------------+------+-----------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Blackjack ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; dataWidth      ; 8     ; Signed Integer                                   ;
+; addressWidth   ; 6     ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                     ;
+; addresswidth   ; 6     ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|incrementador:IncI ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                        ;
+; issigned       ; false ; Enumerated                                                            ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|registrador:RegI ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|CompMaior:CompIMenor13 ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; tam            ; 8     ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|registrador:RegCarta ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|decrementador:DecCarta ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                                            ;
+; issigned       ; true  ; Enumerated                                                                ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|Soma2:SumPontos ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|registrador:RegPontos ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|CompMaior:CompPontos16 ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; tam            ; 8     ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|CompMaior:CompPontos21 ;
++----------------+-------+---------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                      ;
++----------------+-------+---------------------------------------------------------------------------+
+; tam            ; 8     ; Signed Integer                                                            ;
++----------------+-------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|incrementador:IncIRAM ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; width          ; 8     ; Signed Integer                                                           ;
+; issigned       ; true  ; Enumerated                                                               ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|Multi21:MultRAM ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; tam            ; 8     ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|Multi21:MultAddress ;
++----------------+-------+------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                   ;
++----------------+-------+------------------------------------------------------------------------+
+; tam            ; 8     ; Signed Integer                                                         ;
++----------------+-------+------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|MemoriaRAM:RAM ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; datawidth      ; 8     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|MemoriaRAM:RAM|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+----------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                           ;
++------------------------------------+----------------------+----------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                        ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                                        ;
+; WIDTH_A                            ; 8                    ; Signed Integer                                                 ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                                                 ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                                                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                        ;
+; WIDTH_B                            ; 1                    ; Signed Integer                                                 ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer                                                 ;
+; NUMWORDS_B                         ; 0                    ; Signed Integer                                                 ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                                                 ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                        ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                                                 ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                        ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Signed Integer                                                 ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                                 ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                        ;
+; CBXI_PARAMETER                     ; altsyncram_0vp3      ; Untyped                                                        ;
++------------------------------------+----------------------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|CompIgual:CompBaralho ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; tam            ; 8     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                          ;
++-------------------------------------------+-------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                         ;
++-------------------------------------------+-------------------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                             ;
+; Entity Instance                           ; blocoOperativo:bloco_operativo|MemoriaRAM:RAM|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                                   ;
+;     -- WIDTH_A                            ; 8                                                                             ;
+;     -- NUMWORDS_A                         ; 256                                                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                  ;
+;     -- WIDTH_B                            ; 1                                                                             ;
+;     -- NUMWORDS_B                         ; 0                                                                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                     ;
++-------------------------------------------+-------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "blocoOperativo:bloco_operativo|CompIgual:CompBaralho" ;
++------+-------+----------+--------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                ;
++------+-------+----------+--------------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                           ;
++------+-------+----------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------+
+; Port Connectivity Checks: "blocoOperativo:bloco_operativo|Multi21:MultRAM" ;
++------+-------+----------+--------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                          ;
++------+-------+----------+--------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                     ;
++------+-------+----------+--------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "blocoOperativo:bloco_operativo|CompMaior:CompPontos21" ;
++---------+-------+----------+------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                              ;
++---------+-------+----------+------------------------------------------------------+
+; b[7..5] ; Input ; Info     ; Stuck at GND                                         ;
+; b[4]    ; Input ; Info     ; Stuck at VCC                                         ;
+; b[3]    ; Input ; Info     ; Stuck at GND                                         ;
+; b[2]    ; Input ; Info     ; Stuck at VCC                                         ;
+; b[1]    ; Input ; Info     ; Stuck at GND                                         ;
+; b[0]    ; Input ; Info     ; Stuck at VCC                                         ;
++---------+-------+----------+------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "blocoOperativo:bloco_operativo|CompMaior:CompPontos16" ;
++---------+-------+----------+------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                              ;
++---------+-------+----------+------------------------------------------------------+
+; b[7..5] ; Input ; Info     ; Stuck at GND                                         ;
+; b[3..0] ; Input ; Info     ; Stuck at GND                                         ;
+; b[4]    ; Input ; Info     ; Stuck at VCC                                         ;
++---------+-------+----------+------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "blocoOperativo:bloco_operativo|CompMaior:CompIMenor13" ;
++---------+-------+----------+------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                              ;
++---------+-------+----------+------------------------------------------------------+
+; a[3..2] ; Input ; Info     ; Stuck at VCC                                         ;
+; a[7..4] ; Input ; Info     ; Stuck at GND                                         ;
+; a[1]    ; Input ; Info     ; Stuck at GND                                         ;
+; a[0]    ; Input ; Info     ; Stuck at VCC                                         ;
++---------+-------+----------+------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "blocoOperativo:bloco_operativo"                                                                                 ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                  ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; sttaddcarta ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "blocoControle:bloco_controle"                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                      ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; sttaddcarta ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++-------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 63                          ;
+; cycloneiii_ff         ; 56                          ;
+;     CLR               ; 33                          ;
+;     ENA               ; 8                           ;
+;     ENA CLR           ; 15                          ;
+; cycloneiii_lcell_comb ; 78                          ;
+;     arith             ; 27                          ;
+;         2 data inputs ; 19                          ;
+;         3 data inputs ; 8                           ;
+;     normal            ; 51                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 20                          ;
+; cycloneiii_ram_block  ; 8                           ;
+;                       ;                             ;
+; Max LUT depth         ; 2.70                        ;
+; Average LUT depth     ; 1.67                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Thu Nov 26 18:20:39 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Blackjack -c Blackjack
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file blackjack.vhd
+    Info (12022): Found design unit 1: Blackjack-structural File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 252
+    Info (12023): Found entity 1: Blackjack File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 221
+Info (12021): Found 2 design units, including 1 entities, in source file incrementador.vhd
+    Info (12022): Found design unit 1: incrementador-behavioural File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Incrementador.vhd Line: 16
+    Info (12023): Found entity 1: incrementador File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Incrementador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file decrementador.vhd
+    Info (12022): Found design unit 1: decrementador-behavioural File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Decrementador.vhd Line: 16
+    Info (12023): Found entity 1: decrementador File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Decrementador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file multi21.vhd
+    Info (12022): Found design unit 1: Multi21-arch File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Multi21.vhd Line: 15
+    Info (12023): Found entity 1: Multi21 File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Multi21.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file soma2.vhd
+    Info (12022): Found design unit 1: Soma2-Behavioral File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Soma2.vhd Line: 14
+    Info (12023): Found entity 1: Soma2 File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Soma2.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file compmaior.vhd
+    Info (12022): Found design unit 1: CompMaior-arch File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/CompMaior.vhd Line: 14
+    Info (12023): Found entity 1: CompMaior File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/CompMaior.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file compigual.vhd
+    Info (12022): Found design unit 1: CompIgual-arch File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/CompIgual.vhd Line: 14
+    Info (12023): Found entity 1: CompIgual File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/CompIgual.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file blococontrole.vhd
+    Info (12022): Found design unit 1: blocoControle-FSM File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoControle.vhd Line: 21
+    Info (12023): Found entity 1: blocoControle File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoControle.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file blocooperativo.vhd
+    Info (12022): Found design unit 1: blocoOperativo-datapath File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoOperativo.vhd Line: 32
+    Info (12023): Found entity 1: blocoOperativo File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoOperativo.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file registrador.vhd
+    Info (12022): Found design unit 1: registrador-behavioural File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/registrador.vhd Line: 19
+    Info (12023): Found entity 1: registrador File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/registrador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file memoriaram.vhd
+    Info (12022): Found design unit 1: memoriaram-SYN File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/MemoriaRAM.vhd Line: 55
+    Info (12023): Found entity 1: MemoriaRAM File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/MemoriaRAM.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file memoriaram2.vhd
+    Info (12022): Found design unit 1: memoriaram2-SYN File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/MemoriaRAM2.vhd Line: 53
+    Info (12023): Found entity 1: MemoriaRAM2 File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/MemoriaRAM2.vhd Line: 41
+Info (12021): Found 1 design units, including 0 entities, in source file pkg_estado.vhd
+    Info (12022): Found design unit 1: pkg_Estado File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/pkg_Estado.vhd Line: 1
+Info (12021): Found 2 design units, including 1 entities, in source file testbenchmulti21.vhd
+    Info (12022): Found design unit 1: testbench_mux2x1-arch File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/testbenchMulti21.vhd Line: 7
+    Info (12023): Found entity 1: testbench_mux2x1 File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/testbenchMulti21.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file testbenchblackjack.vhd
+    Info (12022): Found design unit 1: testbenchBlackjack-testbenchBlackjack_arch File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/testbenchBlackjack.vhd Line: 10
+    Info (12023): Found entity 1: testbenchBlackjack File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/testbenchBlackjack.vhd Line: 5
+Info (12127): Elaborating entity "Blackjack" for the top level hierarchy
+Info (12128): Elaborating entity "blocoControle" for hierarchy "blocoControle:bloco_controle" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 312
+Warning (10541): VHDL Signal Declaration warning at blocoControle.vhd(15): used implicit default value for signal "cmdResetCarta" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoControle.vhd Line: 15
+Warning (10541): VHDL Signal Declaration warning at blocoControle.vhd(17): used implicit default value for signal "testEstadoAtual" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoControle.vhd Line: 17
+Warning (10492): VHDL Process Statement warning at blocoControle.vhd(52): signal "sttIMenor13" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoControle.vhd Line: 52
+Warning (10492): VHDL Process Statement warning at blocoControle.vhd(178): signal "addCarta" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoControle.vhd Line: 178
+Info (12128): Elaborating entity "blocoOperativo" for hierarchy "blocoOperativo:bloco_operativo" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 321
+Warning (10541): VHDL Signal Declaration warning at blocoOperativo.vhd(27): used implicit default value for signal "sttAddCarta" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoOperativo.vhd Line: 27
+Info (12128): Elaborating entity "incrementador" for hierarchy "blocoOperativo:bloco_operativo|incrementador:IncI" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoOperativo.vhd Line: 138
+Info (12128): Elaborating entity "registrador" for hierarchy "blocoOperativo:bloco_operativo|registrador:RegI" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoOperativo.vhd Line: 145
+Info (12128): Elaborating entity "CompMaior" for hierarchy "blocoOperativo:bloco_operativo|CompMaior:CompIMenor13" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoOperativo.vhd Line: 150
+Info (12128): Elaborating entity "decrementador" for hierarchy "blocoOperativo:bloco_operativo|decrementador:DecCarta" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoOperativo.vhd Line: 163
+Info (12128): Elaborating entity "Soma2" for hierarchy "blocoOperativo:bloco_operativo|Soma2:SumPontos" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoOperativo.vhd Line: 172
+Info (12128): Elaborating entity "incrementador" for hierarchy "blocoOperativo:bloco_operativo|incrementador:IncIRAM" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoOperativo.vhd Line: 199
+Info (12128): Elaborating entity "Multi21" for hierarchy "blocoOperativo:bloco_operativo|Multi21:MultRAM" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoOperativo.vhd Line: 205
+Info (12128): Elaborating entity "MemoriaRAM" for hierarchy "blocoOperativo:bloco_operativo|MemoriaRAM:RAM" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoOperativo.vhd Line: 216
+Info (12128): Elaborating entity "altsyncram" for hierarchy "blocoOperativo:bloco_operativo|MemoriaRAM:RAM|altsyncram:altsyncram_component" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/MemoriaRAM.vhd Line: 62
+Info (12130): Elaborated megafunction instantiation "blocoOperativo:bloco_operativo|MemoriaRAM:RAM|altsyncram:altsyncram_component" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/MemoriaRAM.vhd Line: 62
+Info (12133): Instantiated megafunction "blocoOperativo:bloco_operativo|MemoriaRAM:RAM|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/MemoriaRAM.vhd Line: 62
+    Info (12134): Parameter "address_aclr_a" = "UNUSED"
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK1"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "byteena_aclr_a" = "UNUSED"
+    Info (12134): Parameter "byteena_aclr_b" = "NONE"
+    Info (12134): Parameter "byteena_reg_b" = "CLOCK1"
+    Info (12134): Parameter "clock_enable_core_a" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_core_b" = "USE_INPUT_CLKEN"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "NORMAL"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "NORMAL"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "ecc_pipeline_stage_enabled" = "FALSE"
+    Info (12134): Parameter "enable_ecc" = "FALSE"
+    Info (12134): Parameter "implement_in_les" = "OFF"
+    Info (12134): Parameter "indata_aclr_a" = "UNUSED"
+    Info (12134): Parameter "indata_aclr_b" = "NONE"
+    Info (12134): Parameter "indata_reg_b" = "CLOCK1"
+    Info (12134): Parameter "init_file" = "UNUSED"
+    Info (12134): Parameter "init_file_layout" = "PORT_A"
+    Info (12134): Parameter "maximum_depth" = "0"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "numwords_b" = "0"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "ram_block_type" = "AUTO"
+    Info (12134): Parameter "rdcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "rdcontrol_reg_b" = "CLOCK1"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "read_during_write_mode_port_b" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "stratixiv_m144k_allow_dual_clocks" = "ON"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_b" = "1"
+    Info (12134): Parameter "width_byteena_a" = "1"
+    Info (12134): Parameter "width_byteena_b" = "1"
+    Info (12134): Parameter "width_eccstatus" = "3"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "wrcontrol_aclr_a" = "UNUSED"
+    Info (12134): Parameter "wrcontrol_aclr_b" = "NONE"
+    Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0vp3.tdf
+    Info (12023): Found entity 1: altsyncram_0vp3 File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/db/altsyncram_0vp3.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_0vp3" for hierarchy "blocoOperativo:bloco_operativo|MemoriaRAM:RAM|altsyncram:altsyncram_component|altsyncram_0vp3:auto_generated" File: d:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "CompIgual" for hierarchy "blocoOperativo:bloco_operativo|CompIgual:CompBaralho" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/blocoOperativo.vhd Line: 222
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "testEstadoAtual.SL00" is stuck at VCC File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL01" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL01a" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL02" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL03" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL04" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL05" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL06" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL07" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL07a" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL08" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL09" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL09a" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL10" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL11" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL12" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL12a" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL13" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL14" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL15" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL16" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL17" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL18" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL19" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL20" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL21" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL22" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL23" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL24" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL25" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL26" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL27" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL27a" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+    Warning (13410): Pin "testEstadoAtual.SL28" is stuck at GND File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 242
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "readd" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 231
+    Warning (15610): No output dependent on input pin "address[0]" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 235
+    Warning (15610): No output dependent on input pin "address[1]" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 235
+    Warning (15610): No output dependent on input pin "address[2]" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 235
+    Warning (15610): No output dependent on input pin "address[3]" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 235
+    Warning (15610): No output dependent on input pin "address[4]" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 235
+    Warning (15610): No output dependent on input pin "address[5]" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 235
+    Warning (15610): No output dependent on input pin "addCarta" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 233
+Info (21057): Implemented 172 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
+    Info (21059): Implemented 43 output pins
+    Info (21061): Implemented 101 logic cells
+    Info (21064): Implemented 8 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 4849 megabytes
+    Info: Processing ended: Thu Nov 26 18:20:52 2020
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:25
+
+
