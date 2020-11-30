@@ -88,3 +88,5 @@ add wave -position insertpoint sim:/blackjack_vhd_tst/*
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 #           Using alternate file: ./wlftiwr2ra
 run
+# End time: 18:25:36 on Nov 30,2020, Elapsed time: 0:02:51
+# Errors: 0, Warnings: 3
