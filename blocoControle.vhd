@@ -170,7 +170,7 @@ begin
 				
 			--SL23				};											----SL26
 			when SL23 =>
-				proximoEstado <= SL26;
+				proximoEstado <= SL24;
 
 			
 			--SL24		else {											----SL25

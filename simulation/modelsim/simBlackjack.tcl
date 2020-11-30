@@ -3,6 +3,6 @@ force /reset_req "0" 0ns
 force /chipselect "1" 35ns
 force /readd "0" 0ns
 force /writee "1" 35ns
-force /addCarta "1" 35ns
+force /addCarta "1" 0ns, "1" 500ns
 force /address "000000" 0ns 
-force /writedata "00001010" 0ns, "00001100" 280ns, "00001000" 560ns, "00001010" 840ns
+force /writedata "00000001" 0ns, "00000010" 280ns, "00000011" 560ns, "00000100" 840ns

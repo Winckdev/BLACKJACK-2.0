@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Blackjack
-Thu Nov 26 18:20:52 2020
+Mon Nov 30 17:07:25 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -16,39 +16,37 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
  10. State Machine - |Blackjack|blocoControle:bloco_controle|estadoAtual
- 11. Registers Removed During Synthesis
- 12. Removed Registers Triggering Further Register Optimizations
- 13. General Register Statistics
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for blocoOperativo:bloco_operativo|MemoriaRAM:RAM|altsyncram:altsyncram_component|altsyncram_0vp3:auto_generated
- 16. Parameter Settings for User Entity Instance: Top-level Entity: |Blackjack
- 17. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo
- 18. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|incrementador:IncI
- 19. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|registrador:RegI
- 20. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|CompMaior:CompIMenor13
- 21. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|registrador:RegCarta
- 22. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|decrementador:DecCarta
- 23. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|Soma2:SumPontos
- 24. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|registrador:RegPontos
- 25. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|CompMaior:CompPontos16
- 26. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|CompMaior:CompPontos21
- 27. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|incrementador:IncIRAM
- 28. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|Multi21:MultRAM
- 29. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|Multi21:MultAddress
- 30. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|MemoriaRAM:RAM
- 31. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|MemoriaRAM:RAM|altsyncram:altsyncram_component
- 32. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|CompIgual:CompBaralho
- 33. altsyncram Parameter Settings by Entity Instance
- 34. Port Connectivity Checks: "blocoOperativo:bloco_operativo|CompIgual:CompBaralho"
- 35. Port Connectivity Checks: "blocoOperativo:bloco_operativo|Multi21:MultRAM"
- 36. Port Connectivity Checks: "blocoOperativo:bloco_operativo|CompMaior:CompPontos21"
- 37. Port Connectivity Checks: "blocoOperativo:bloco_operativo|CompMaior:CompPontos16"
- 38. Port Connectivity Checks: "blocoOperativo:bloco_operativo|CompMaior:CompIMenor13"
- 39. Port Connectivity Checks: "blocoOperativo:bloco_operativo"
- 40. Port Connectivity Checks: "blocoControle:bloco_controle"
- 41. Post-Synthesis Netlist Statistics for Top Partition
- 42. Elapsed Time Per Partition
- 43. Analysis & Synthesis Messages
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for blocoOperativo:bloco_operativo|MemoriaRAM:RAM|altsyncram:altsyncram_component|altsyncram_0vp3:auto_generated
+ 14. Parameter Settings for User Entity Instance: Top-level Entity: |Blackjack
+ 15. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo
+ 16. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|incrementador:IncI
+ 17. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|registrador:RegI
+ 18. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|CompMaior:CompIMenor13
+ 19. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|registrador:RegCarta
+ 20. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|decrementador:DecCarta
+ 21. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|Soma2:SumPontos
+ 22. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|registrador:RegPontos
+ 23. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|CompMaior:CompPontos16
+ 24. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|CompMaior:CompPontos21
+ 25. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|incrementador:IncIRAM
+ 26. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|Multi21:MultRAM
+ 27. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|Multi21:MultAddress
+ 28. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|MemoriaRAM:RAM
+ 29. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|MemoriaRAM:RAM|altsyncram:altsyncram_component
+ 30. Parameter Settings for User Entity Instance: blocoOperativo:bloco_operativo|CompIgual:CompBaralho
+ 31. altsyncram Parameter Settings by Entity Instance
+ 32. Port Connectivity Checks: "blocoOperativo:bloco_operativo|CompIgual:CompBaralho"
+ 33. Port Connectivity Checks: "blocoOperativo:bloco_operativo|Multi21:MultRAM"
+ 34. Port Connectivity Checks: "blocoOperativo:bloco_operativo|CompMaior:CompPontos21"
+ 35. Port Connectivity Checks: "blocoOperativo:bloco_operativo|CompMaior:CompPontos16"
+ 36. Port Connectivity Checks: "blocoOperativo:bloco_operativo|CompMaior:CompIMenor13"
+ 37. Port Connectivity Checks: "blocoOperativo:bloco_operativo"
+ 38. Port Connectivity Checks: "blocoControle:bloco_controle"
+ 39. Post-Synthesis Netlist Statistics for Top Partition
+ 40. Elapsed Time Per Partition
+ 41. Analysis & Synthesis Messages
 
 
 
@@ -74,15 +72,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 26 18:20:52 2020       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 30 17:07:25 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Blackjack                                   ;
 ; Top-level Entity Name              ; Blackjack                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 101                                         ;
-;     Total combinational functions  ; 76                                          ;
-;     Dedicated logic registers      ; 56                                          ;
-; Total registers                    ; 56                                          ;
+; Total logic elements               ; 103                                         ;
+;     Total combinational functions  ; 78                                          ;
+;     Dedicated logic registers      ; 58                                          ;
+; Total registers                    ; 58                                          ;
 ; Total pins                         ; 63                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 2,048                                       ;
@@ -228,20 +226,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 101       ;
+; Estimated Total logic elements              ; 103       ;
 ;                                             ;           ;
-; Total combinational functions               ; 76        ;
+; Total combinational functions               ; 78        ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 20        ;
-;     -- 3 input functions                    ; 17        ;
-;     -- <=2 input functions                  ; 39        ;
+;     -- 3 input functions                    ; 18        ;
+;     -- <=2 input functions                  ; 40        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 49        ;
+;     -- normal mode                          ; 51        ;
 ;     -- arithmetic mode                      ; 27        ;
 ;                                             ;           ;
-; Total registers                             ; 56        ;
-;     -- Dedicated logic registers            ; 56        ;
+; Total registers                             ; 58        ;
+;     -- Dedicated logic registers            ; 58        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 63        ;
@@ -250,9 +248,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 64        ;
-; Total fan-out                               ; 548       ;
-; Average fan-out                             ; 2.06      ;
+; Maximum fan-out                             ; 66        ;
+; Total fan-out                               ; 559       ;
+; Average fan-out                             ; 2.07      ;
 +---------------------------------------------+-----------+
 
 
@@ -261,8 +259,8 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |Blackjack                                   ; 76 (0)              ; 56 (0)                    ; 2048        ; 0            ; 0       ; 0         ; 63   ; 0            ; |Blackjack                                                                                                              ; Blackjack       ; work         ;
-;    |blocoControle:bloco_controle|            ; 21 (21)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoControle:bloco_controle                                                                                 ; blocoControle   ; work         ;
+; |Blackjack                                   ; 78 (0)              ; 58 (0)                    ; 2048        ; 0            ; 0       ; 0         ; 63   ; 0            ; |Blackjack                                                                                                              ; Blackjack       ; work         ;
+;    |blocoControle:bloco_controle|            ; 23 (23)             ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoControle:bloco_controle                                                                                 ; blocoControle   ; work         ;
 ;    |blocoOperativo:bloco_operativo|          ; 55 (0)              ; 24 (0)                    ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoOperativo:bloco_operativo                                                                               ; blocoOperativo  ; work         ;
 ;       |CompIgual:CompBaralho|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoOperativo:bloco_operativo|CompIgual:CompBaralho                                                         ; CompIgual       ; work         ;
 ;       |CompMaior:CompIMenor13|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Blackjack|blocoOperativo:bloco_operativo|CompMaior:CompIMenor13                                                        ; CompMaior       ; work         ;
@@ -341,36 +339,15 @@ Encoding Type:  One-Hot
 +-------------------+------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+------------------+-------------------+------------------+------------------+------------------+-------------------+------------------+------------------+-------------------+------------------+------------------+------------------+------------------+------------------+------------------+-------------------+------------------+------------------+
 
 
-+----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                     ;
-+-----------------------------------------------+----------------------------------------+
-; Register name                                 ; Reason for Removal                     ;
-+-----------------------------------------------+----------------------------------------+
-; blocoControle:bloco_controle|estadoAtual.SL24 ; Stuck at GND due to stuck port data_in ;
-; blocoControle:bloco_controle|estadoAtual.SL25 ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2         ;                                        ;
-+-----------------------------------------------+----------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                               ;
-+-----------------------------------------------+---------------------------+-----------------------------------------------+
-; Register name                                 ; Reason for Removal        ; Registers Removed due to This Register        ;
-+-----------------------------------------------+---------------------------+-----------------------------------------------+
-; blocoControle:bloco_controle|estadoAtual.SL24 ; Stuck at GND              ; blocoControle:bloco_controle|estadoAtual.SL25 ;
-;                                               ; due to stuck port data_in ;                                               ;
-+-----------------------------------------------+---------------------------+-----------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 56    ;
+; Total registers                              ; 58    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 48    ;
+; Number of registers using Asynchronous Clear ; 50    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 23    ;
 ; Number of registers using Preset             ; 0     ;
@@ -385,6 +362,7 @@ Encoding Type:  One-Hot
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Blackjack|blocoControle:bloco_controle|Selector5  ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Blackjack|blocoControle:bloco_controle|Selector22 ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Blackjack|blocoControle:bloco_controle|Selector26 ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Blackjack|blocoControle:bloco_controle|Selector29 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 
 
@@ -722,24 +700,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 63                          ;
-; cycloneiii_ff         ; 56                          ;
-;     CLR               ; 33                          ;
+; cycloneiii_ff         ; 58                          ;
+;     CLR               ; 35                          ;
 ;     ENA               ; 8                           ;
 ;     ENA CLR           ; 15                          ;
-; cycloneiii_lcell_comb ; 78                          ;
+; cycloneiii_lcell_comb ; 80                          ;
 ;     arith             ; 27                          ;
 ;         2 data inputs ; 19                          ;
 ;         3 data inputs ; 8                           ;
-;     normal            ; 51                          ;
+;     normal            ; 53                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 16                          ;
-;         3 data inputs ; 9                           ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 10                          ;
 ;         4 data inputs ; 20                          ;
 ; cycloneiii_ram_block  ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.70                        ;
-; Average LUT depth     ; 1.67                        ;
+; Average LUT depth     ; 1.66                        ;
 +-----------------------+-----------------------------+
 
 
@@ -758,7 +736,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 26 18:20:39 2020
+    Info: Processing started: Mon Nov 30 17:07:13 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Blackjack -c Blackjack
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -918,7 +896,7 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 8 input pin(s) that do not drive logic
+Warning (21074): Design contains 7 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "readd" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 231
     Warning (15610): No output dependent on input pin "address[0]" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 235
     Warning (15610): No output dependent on input pin "address[1]" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 235
@@ -926,16 +904,15 @@ Warning (21074): Design contains 8 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "address[3]" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 235
     Warning (15610): No output dependent on input pin "address[4]" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 235
     Warning (15610): No output dependent on input pin "address[5]" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 235
-    Warning (15610): No output dependent on input pin "addCarta" File: C:/Users/Arthur/Desktop/BLACKJACK-2.0/Blackjack.vhd Line: 233
-Info (21057): Implemented 172 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 174 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 43 output pins
-    Info (21061): Implemented 101 logic cells
+    Info (21061): Implemented 103 logic cells
     Info (21064): Implemented 8 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 51 warnings
-    Info: Peak virtual memory: 4849 megabytes
-    Info: Processing ended: Thu Nov 26 18:20:52 2020
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:25
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
+    Info: Peak virtual memory: 4860 megabytes
+    Info: Processing ended: Mon Nov 30 17:07:25 2020
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:26
 
 

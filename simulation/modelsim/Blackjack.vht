@@ -26,7 +26,7 @@
 
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;
-use work.pkg_Estado.all;                                
+--use work.pkg_Estado.all;                                
 
 ENTITY Blackjack_vhd_tst IS
 END Blackjack_vhd_tst;
@@ -60,7 +60,7 @@ COMPONENT Blackjack
 	reset_req : IN STD_LOGIC;
 	writedata : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 	writee : IN STD_LOGIC
-	testEstadoAtual: BUFFER STD_LOGIC_VECTOR(7 downto 0)
+	--testEstadoAtual: BUFFER STD_LOGIC_VECTOR(7 downto 0)
 	);
 END COMPONENT;
 BEGIN
@@ -102,12 +102,12 @@ BEGIN
 	wait for 550 ns;
 	
 	writedata <= "00000011";
-	addCarta <= '0';
+	
 	
 	wait for 550 ns;
 	
 	writedata <= "00000111";
-	
+	addCarta <= '0';
 	
 WAIT;                                                       
 END PROCESS init;                                           

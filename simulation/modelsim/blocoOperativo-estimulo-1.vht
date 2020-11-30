@@ -19,98 +19,91 @@
 -- ***************************************************************************
 -- Generated on "11/09/2020 16:34:43"
                                                             
--- Vhdl Test Bench template for design  :  blocoControle
+-- Vhdl Test Bench template for design  :  Blackjack
 -- 
 -- Simulation tool : ModelSim-Altera (VHDL)
 -- 
 
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;
---use work.pkg_Estado.all;                                
+use work.pkg_Estado.all;                                
 
-ENTITY blocoControle_vhd_tst IS
-END blocoControle_vhd_tst;
-ARCHITECTURE blocoControle_arch OF blocoControle_vhd_tst IS
+ENTITY Blackjack_vhd_tst IS
+END Blackjack_vhd_tst;
+ARCHITECTURE Blackjack_arch OF Blackjack_vhd_tst IS
 -- constants
 constant PERIODO : time := 10 ns;                                                 
--- signals
-SIGNAL clk : STD_LOGIC := '0';                                                   
-SIGNAL reset_req : STD_LOGIC;
-SIGNAL chipselect : STD_LOGIC;
-SIGNAL readd : STD_LOGIC;
-SIGNAL writee : STD_LOGIC;
+-- signals                                                   
 SIGNAL addCarta : STD_LOGIC;
-SIGNAL sttPontosMaiorDezesseis: STD_LOGIC;
-SIGNAL sttPontosMaiorVinte: STD_LOGIC;
-SIGNAL sttCompBaralho: STD_LOGIC;
-SIGNAL sttIMenor13: STD_LOGIC;
-SIGNAL sttAddCarta: STD_LOGIC;
-SIGNAL interrupt: STD_LOGIC;
-SIGNAL cmdSetI: STD_LOGIC;
-SIGNAL cmdResetI: STD_LOGIC;
-SIGNAL cmdSetPontos: STD_LOGIC;
-SIGNAL cmdResetPontos: STD_LOGIC;
-SIGNAL cmdMultAddress: STD_LOGIC;
-SIGNAL cmdMultBaralho: STD_LOGIC;
-SIGNAL cmdSetCarta: STD_LOGIC;
-SIGNAL cmdResetCarta: STD_LOGIC;
-SIGNAL cmdSetBaralhoI: STD_LOGIC;
+SIGNAL address : STD_LOGIC_VECTOR(5 DOWNTO 0);
+SIGNAL chipselect : STD_LOGIC;
+SIGNAL clk : STD_LOGIC := '0';
+SIGNAL interrupt : STD_LOGIC;
+SIGNAL readd : STD_LOGIC;
+SIGNAL readdata : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL reset_req : STD_LOGIC;
+SIGNAL writedata : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL writee : STD_LOGIC;
 --SIGNAL testEstadoAtual: Estado;
+SIGNAL cmdSetI: std_logic;
+SIGNAL cmdResetI std_logic;
+SIGNAL cmdSetPontos std_logic;
+SIGNAL cmdResetPontos std_logic;
+SIGNAL cmdMultAddress std_logic;
+SIGNAL cmdSetCarta std_logic;
+SIGNAL cmdResetCarta std_logic;
+SIGNAL cmdSetBaralhoI std_logic;
+SIGNAL cmdMultBaralho: std_logic;
+SIGNAL sttPontosMaiorDezesseis:  std_logic;
+SIGNAL sttPontosMaiorVinte:  std_logic;
+SIGNAL sttCompBaralho: std_logic;
+SIGNAL sttIMenor13: std_logic;
+SIGNAL sttAddCarta: std_logic
 
 
-
-COMPONENT blocoControle
+COMPONENT BlocoOperativo
 	PORT (
-		clk: in std_logic;
-		reset_req: in std_logic; 
-		chipselect: in std_logic;
-		readd: in std_logic;
-		writee: in std_logic;
-		addCarta: in std_logic;
-		sttPontosMaiorDezesseis, sttPontosMaiorVinte, sttCompBaralho, sttIMenor13, sttAddCarta: in std_logic;
-		
-		interrupt, cmdSetI, cmdResetI, cmdSetPontos, cmdResetPontos, cmdMultAddress,
-		cmdMultBaralho, cmdSetCarta, cmdResetCarta, cmdSetBaralhoI: BUFFER std_logic
-		--testEstadoAtual: out Estado
+	clk : IN STD_LOGIC;
+	reset_req : IN STD_LOGIC;
+	address : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+	writedata : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+	addCarta : IN STD_LOGIC;
+	readdata : BUFFER STD_LOGIC_VECTOR(7 DOWNTO 0);
+	cmdSetI, cmdResetI, cmdSetPontos,cmdResetPontos, cmdMultAddress,
+			cmdSetCarta, cmdResetCarta, cmdSetBaralhoI, cmdMultBaralho: IN std_logic;
+	sttPontosMaiorDezesseis, sttPontosMaiorVinte, sttCompBaralho, sttIMenor13, sttAddCarta: BUFFER std_logic
+	--testEstadoAtual: BUFFER STD_LOGIC_VECTOR(7 downto 0)
 	);
-	
-
 END COMPONENT;
 BEGIN
 
 	clk <=  '1' after 5 ns when clk = '0' else
         '0' after 5 ns when clk = '1';
 
-	i1 : blocoControle
+	i1 : Blackjack
 	PORT MAP (
 -- list connections between master ports and signals
 	clk => clk,
 	reset_req => reset_req,
-	chipselect => chipselect,
-	readd => readd,
-	writee => writee,
+	address => address,
+	writedata => writedata,
 	addCarta => addCarta,
-	interrupt => interrupt,
-	sttPontosMaiorDezesseis => sttPontosMaiorDezesseis,
-	sttPontosMaiorVinte => sttPontosMaiorVinte,
-	sttCompBaralho => sttCompBaralho,
-	sttIMenor13 => sttIMenor13,
-	sttAddCarta => sttAddCarta,
+	readdata => readdata,
 	cmdSetI => cmdSetI,
 	cmdResetI => cmdResetI,
 	cmdSetPontos => cmdSetPontos,
 	cmdResetPontos => cmdResetPontos,
 	cmdMultAddress => cmdMultAddress,
-	cmdMultBaralho => cmdMultBaralho,
 	cmdSetCarta => cmdSetCarta,
 	cmdResetCarta => cmdResetCarta,
-	cmdSetBaralhoI => cmdSetBaralhoI
+	cmdSetBaralhoI => cmdSetBaralhoI,
+	cmdMultBaralho => cmdMultBaralho,
+	sttPontosMaiorDezesseis => sttPontosMaiorDezesseis,
+	sttPontosMaiorVinte => sttPontosMaiorVinte,
+	sttCompBaralho => sttCompBaralho,
+	sttIMenor13 => sttIMenor13,
+	sttAddCarta => sttAddCarta
 	
-	
-	--address => address,
-	--chipselect => chipselect,
-	--readdata => readdata,
-	--writedata => writedata,
 	--testEstadoAtual => testEstadoAtual
 	);
 init : PROCESS                                               
@@ -118,16 +111,9 @@ init : PROCESS
 BEGIN                                                        
         -- code that executes only once
 	reset_req <= '0';
-	readd <= '0';
-	sttIMenor13 <= '0';
-	chipselect <= '1';
-	writee <= '1';
-	sttCompBaralho <= '1';
+	address <= '000000';
+	writedata <= '0';
 	addCarta <= '1';
-	sttPontosMaiorDezesseis <= '0';
-	sttPontosMaiorVinte <= '0';
-	sttAddCarta <= '0';
-	
 	
 	
 WAIT;                                                       
@@ -140,4 +126,4 @@ BEGIN
         -- code executes for every event on sensitivity list  
 WAIT;                                                        
 END PROCESS always;                                          
-END blocoControle_arch;
+END Blackjack_arch;

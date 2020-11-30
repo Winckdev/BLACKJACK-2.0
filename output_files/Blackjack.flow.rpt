@@ -1,5 +1,5 @@
 Flow report for Blackjack
-Thu Nov 26 18:21:06 2020
+Mon Nov 30 17:07:40 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Nov 26 18:21:06 2020       ;
+; Flow Status                        ; Successful - Mon Nov 30 17:07:40 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Blackjack                                   ;
 ; Top-level Entity Name              ; Blackjack                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 89 / 6,272 ( 1 % )                          ;
-;     Total combinational functions  ; 76 / 6,272 ( 1 % )                          ;
-;     Dedicated logic registers      ; 56 / 6,272 ( < 1 % )                        ;
-; Total registers                    ; 56                                          ;
+; Total logic elements               ; 88 / 6,272 ( 1 % )                          ;
+;     Total combinational functions  ; 78 / 6,272 ( 1 % )                          ;
+;     Dedicated logic registers      ; 58 / 6,272 ( < 1 % )                        ;
+; Total registers                    ; 58                                          ;
 ; Total pins                         ; 63 / 92 ( 68 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 2,048 / 276,480 ( < 1 % )                   ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/26/2020 18:20:40 ;
+; Start date & time ; 11/30/2020 17:07:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Blackjack           ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 269058764459242.160642564007408        ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 269058764459242.160676683314496        ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                     ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_RUN_TOOL_AUTOMATICALLY          ; On                                     ; --            ; --          ; eda_simulation ;
@@ -95,11 +95,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4849 MB             ; 00:00:25                           ;
-; Fitter               ; 00:00:07     ; 1.0                     ; 6089 MB             ; 00:00:09                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 4674 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 4864 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4636 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4860 MB             ; 00:00:26                           ;
+; Fitter               ; 00:00:07     ; 1.0                     ; 6087 MB             ; 00:00:08                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4675 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 4867 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4636 MB             ; 00:00:01                           ;
 ; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:38                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 

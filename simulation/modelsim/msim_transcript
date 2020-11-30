@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {Blackjack.vho}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:21:13 on Nov 26,2020
+# Start time: 17:07:46 on Nov 30,2020
 # vcom -reportprogress 300 -93 -work work Blackjack.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -27,15 +27,27 @@
 # -- Loading package altera_primitives_components
 # -- Compiling entity Blackjack
 # -- Compiling architecture structure of Blackjack
-# End time: 18:21:13 on Nov 26,2020, Elapsed time: 0:00:00
+# End time: 17:07:47 on Nov 30,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-vsim work.blackjack
-# vsim work.blackjack 
-# Start time: 18:21:29 on Nov 26,2020
+vcom -reportprogress 300 -work work C:/Users/Arthur/Desktop/BLACKJACK-2.0/simulation/modelsim/Blackjack.vht
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:08:12 on Nov 30,2020
+# vcom -reportprogress 300 -work work C:/Users/Arthur/Desktop/BLACKJACK-2.0/simulation/modelsim/Blackjack.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Blackjack_vhd_tst
+# -- Compiling architecture Blackjack_arch of Blackjack_vhd_tst
+# End time: 17:08:12 on Nov 30,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.blackjack_vhd_tst
+# vsim work.blackjack_vhd_tst 
+# Start time: 17:08:16 on Nov 30,2020
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading work.blackjack_vhd_tst(blackjack_arch)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
 # Loading altera.dffeas_pack
@@ -54,20 +66,106 @@ vsim work.blackjack
 # Loading cycloneive.cycloneive_ram_block(block_arch)
 # Loading cycloneive.cycloneive_ram_register(reg_arch)
 # Loading cycloneive.cycloneive_ram_pulse_generator(pgen_arch)
-# ** Warning: Design size of 25901 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 26652 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
-vcom -reportprogress 300 -work work C:/Users/Arthur/Desktop/BLACKJACK-2.0/testbenchBlackjack.vhd
+add wave -position insertpoint sim:/blackjack_vhd_tst/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Arthur  Hostname: DESKTOP-NARSH0K  ProcessID: 700
+#           Attempting to use alternate WLF file "./wlft2rfi23".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft2rfi23
+run
+vcom -reportprogress 300 -work work C:/Users/Arthur/Desktop/BLACKJACK-2.0/simulation/modelsim/Blackjack.vht
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:21:47 on Nov 26,2020
-# vcom -reportprogress 300 -work work C:/Users/Arthur/Desktop/BLACKJACK-2.0/testbenchBlackjack.vhd 
+# Start time: 17:14:54 on Nov 30,2020
+# vcom -reportprogress 300 -work work C:/Users/Arthur/Desktop/BLACKJACK-2.0/simulation/modelsim/Blackjack.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# ** Error: (vcom-11) Could not find work.pkg_estado.
-# ** Error (suppressible): C:/Users/Arthur/Desktop/BLACKJACK-2.0/testbenchBlackjack.vhd(3): (vcom-1195) Cannot find expanded name "work.pkg_Estado".
-# ** Error: C:/Users/Arthur/Desktop/BLACKJACK-2.0/testbenchBlackjack.vhd(3): Unknown expanded name.
-# ** Error: C:/Users/Arthur/Desktop/BLACKJACK-2.0/testbenchBlackjack.vhd(5): VHDL Compiler exiting
-# End time: 18:21:47 on Nov 26,2020, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 0
-# End time: 18:27:12 on Nov 26,2020, Elapsed time: 0:05:43
-# Errors: 3, Warnings: 1
+# -- Compiling entity Blackjack_vhd_tst
+# -- Compiling architecture Blackjack_arch of Blackjack_vhd_tst
+# End time: 17:14:54 on Nov 30,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.blackjack_vhd_tst
+# End time: 17:15:05 on Nov 30,2020, Elapsed time: 0:06:49
+# Errors: 0, Warnings: 3
+# vsim work.blackjack_vhd_tst 
+# Start time: 17:15:05 on Nov 30,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.blackjack_vhd_tst(blackjack_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading work.blackjack(structure)
+# Loading work.hard_block(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
+# Loading cycloneive.cycloneive_ena_reg(behave)
+# Loading altera.dffeas(vital_dffeas)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading cycloneive.cycloneive_ram_block(block_arch)
+# Loading cycloneive.cycloneive_ram_register(reg_arch)
+# Loading cycloneive.cycloneive_ram_pulse_generator(pgen_arch)
+# ** Warning: Design size of 26652 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+add wave -position insertpoint sim:/blackjack_vhd_tst/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Arthur  Hostname: DESKTOP-NARSH0K  ProcessID: 700
+#           Attempting to use alternate WLF file "./wlfttt6sr0".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfttt6sr0
+run
+vcom -reportprogress 300 -work work C:/Users/Arthur/Desktop/BLACKJACK-2.0/simulation/modelsim/Blackjack.vht
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:15:53 on Nov 30,2020
+# vcom -reportprogress 300 -work work C:/Users/Arthur/Desktop/BLACKJACK-2.0/simulation/modelsim/Blackjack.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Blackjack_vhd_tst
+# -- Compiling architecture Blackjack_arch of Blackjack_vhd_tst
+# End time: 17:15:53 on Nov 30,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.blackjack_vhd_tst
+# End time: 17:15:59 on Nov 30,2020, Elapsed time: 0:00:54
+# Errors: 0, Warnings: 3
+# vsim work.blackjack_vhd_tst 
+# Start time: 17:15:59 on Nov 30,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.blackjack_vhd_tst(blackjack_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneive.cycloneive_atom_pack(body)
+# Loading cycloneive.cycloneive_components
+# Loading work.blackjack(structure)
+# Loading work.hard_block(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneive.cycloneive_io_obuf(arch)
+# Loading cycloneive.cycloneive_io_ibuf(arch)
+# Loading cycloneive.cycloneive_clkctrl(vital_clkctrl)
+# Loading cycloneive.cycloneive_ena_reg(behave)
+# Loading altera.dffeas(vital_dffeas)
+# Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
+# Loading cycloneive.cycloneive_ram_block(block_arch)
+# Loading cycloneive.cycloneive_ram_register(reg_arch)
+# Loading cycloneive.cycloneive_ram_pulse_generator(pgen_arch)
+# ** Warning: Design size of 26652 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+add wave -position insertpoint sim:/blackjack_vhd_tst/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Arthur  Hostname: DESKTOP-NARSH0K  ProcessID: 700
+#           Attempting to use alternate WLF file "./wlfteqa0gd".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfteqa0gd
+run
