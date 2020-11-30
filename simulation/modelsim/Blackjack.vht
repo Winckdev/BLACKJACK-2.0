@@ -93,11 +93,11 @@ BEGIN
 	writee <= '1';
 	addCarta <= '1';
 	address <= "000000";
-	writedata <= "00000100";
+	writedata <= "00001100";
 	
 	wait for 550 ns;
 	
-	writedata <= "00000101";
+	writedata <= "00001101";
 	
 	wait for 550 ns;
 	
