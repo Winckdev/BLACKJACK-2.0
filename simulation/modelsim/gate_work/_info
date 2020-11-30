@@ -27,9 +27,9 @@ VAjZVJmRc2a_8ijA5GIV[J0
 !s100 ffHkWRYi<QBU`<jBMYJIg3
 Z12 OV;C;10.5b;63
 31
-Z13 !s110 1606768382
+Z13 !s110 1606771323
 !i10b 1
-Z14 !s108 1606768382.000000
+Z14 !s108 1606771323.000000
 Z15 !s90 -reportprogress|300|-93|-work|work|Blackjack.vho|
 Z16 !s107 Blackjack.vho|
 !i113 1
@@ -60,7 +60,7 @@ R16
 R17
 R18
 Eblackjack_vhd_tst
-Z19 w1606768369
+Z19 w1606771351
 R7
 R8
 R0
@@ -72,9 +72,9 @@ VY]1T[mm2YXJ0S1HTA?<B>1
 !s100 J9NAEdHDjlQobB52>bU9]1
 R12
 32
-Z22 !s110 1606768388
+Z22 !s110 1606771362
 !i10b 1
-Z23 !s108 1606768388.000000
+Z23 !s108 1606771361.000000
 Z24 !s90 -reportprogress|300|-work|work|C:/Users/Arthur/Desktop/BLACKJACK-2.0/simulation/modelsim/Blackjack.vht|
 Z25 !s107 C:/Users/Arthur/Desktop/BLACKJACK-2.0/simulation/modelsim/Blackjack.vht|
 !i113 1
@@ -86,8 +86,8 @@ R8
 DEx4 work 17 blackjack_vhd_tst 0 22 Y]1T[mm2YXJ0S1HTA?<B>1
 l66
 L33
-V]d3jED@[Yf>PcLMNKIhJl3
-!s100 >?_zzn5LV2kdOC09I011J3
+Vg9Oh7JBM44Q?d8PAPmF412
+!s100 ?]Ym`mf5e0<^3BBW3ig1A3
 R12
 32
 R22

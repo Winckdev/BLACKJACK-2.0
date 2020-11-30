@@ -93,21 +93,20 @@ BEGIN
 	writee <= '1';
 	addCarta <= '1';
 	address <= "000000";
-	writedata <= "00001100";
-	
-	wait for 550 ns;
-	
-	writedata <= "00001101";
+	writedata <= "00000001";
 	
 	wait for 550 ns;
 	
 	writedata <= "00000011";
 	
+	wait for 550 ns;
+	
+	writedata <= "00000010";
+	
 	
 	wait for 550 ns;
 	
-	writedata <= "00000111";
-	addCarta <= '0';
+	writedata <= "00000011";
 	
 WAIT;                                                       
 END PROCESS init;                                           
