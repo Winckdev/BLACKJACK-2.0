@@ -1,0 +1,7 @@
+package pkg_Estado is
+	type Estado is (
+		SL00 ,SL01, SL01a, SL02, SL03, SL04, SL05, SL06, SL07, SL07a, SL08, 
+		SL09, SL09a, SL10, SL11, SL12, SL12a, SL13, SL14, SL15, 
+		SL16, SL17, SL18, SL19, SL20, SL21, SL22, SL23, SL24, SL25, SL26, SL27, SL27a, SL28
+	); 
+end package;

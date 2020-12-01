@@ -1,0 +1,168 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "11/30/2020 15:47:59"
+                                                                                
+// Verilog Test Bench template for design : blocoControle
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module blocoControle_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg addCarta;
+reg chipselect;
+reg clk;
+reg readd;
+reg reset_req;
+reg sttAddCarta;
+reg sttCompBaralho;
+reg sttIMenor13;
+reg sttPontosMaiorDezesseis;
+reg sttPontosMaiorVinte;
+reg writee;
+// wires                                               
+wire cmdMultAddress;
+wire cmdMultBaralho;
+wire cmdResetCarta;
+wire cmdResetI;
+wire cmdResetPontos;
+wire cmdSetBaralhoI;
+wire cmdSetCarta;
+wire cmdSetI;
+wire cmdSetPontos;
+wire interrupt;
+wire testEstadoAtual.SL00;
+wire testEstadoAtual.SL01;
+wire testEstadoAtual.SL01a;
+wire testEstadoAtual.SL02;
+wire testEstadoAtual.SL03;
+wire testEstadoAtual.SL04;
+wire testEstadoAtual.SL05;
+wire testEstadoAtual.SL06;
+wire testEstadoAtual.SL07;
+wire testEstadoAtual.SL07a;
+wire testEstadoAtual.SL08;
+wire testEstadoAtual.SL09;
+wire testEstadoAtual.SL09a;
+wire testEstadoAtual.SL10;
+wire testEstadoAtual.SL11;
+wire testEstadoAtual.SL12;
+wire testEstadoAtual.SL12a;
+wire testEstadoAtual.SL13;
+wire testEstadoAtual.SL14;
+wire testEstadoAtual.SL15;
+wire testEstadoAtual.SL16;
+wire testEstadoAtual.SL17;
+wire testEstadoAtual.SL18;
+wire testEstadoAtual.SL19;
+wire testEstadoAtual.SL20;
+wire testEstadoAtual.SL21;
+wire testEstadoAtual.SL22;
+wire testEstadoAtual.SL23;
+wire testEstadoAtual.SL24;
+wire testEstadoAtual.SL25;
+wire testEstadoAtual.SL26;
+wire testEstadoAtual.SL27;
+wire testEstadoAtual.SL27a;
+wire testEstadoAtual.SL28;
+
+// assign statements (if any)                          
+blocoControle i1 (
+// port map - connection between master ports and signals/registers   
+	.addCarta(addCarta),
+	.chipselect(chipselect),
+	.clk(clk),
+	.cmdMultAddress(cmdMultAddress),
+	.cmdMultBaralho(cmdMultBaralho),
+	.cmdResetCarta(cmdResetCarta),
+	.cmdResetI(cmdResetI),
+	.cmdResetPontos(cmdResetPontos),
+	.cmdSetBaralhoI(cmdSetBaralhoI),
+	.cmdSetCarta(cmdSetCarta),
+	.cmdSetI(cmdSetI),
+	.cmdSetPontos(cmdSetPontos),
+	.interrupt(interrupt),
+	.readd(readd),
+	.reset_req(reset_req),
+	.sttAddCarta(sttAddCarta),
+	.sttCompBaralho(sttCompBaralho),
+	.sttIMenor13(sttIMenor13),
+	.sttPontosMaiorDezesseis(sttPontosMaiorDezesseis),
+	.sttPontosMaiorVinte(sttPontosMaiorVinte),
+	.\testEstadoAtual.SL00 (testEstadoAtual.SL00),
+	.\testEstadoAtual.SL01 (testEstadoAtual.SL01),
+	.\testEstadoAtual.SL01a (testEstadoAtual.SL01a),
+	.\testEstadoAtual.SL02 (testEstadoAtual.SL02),
+	.\testEstadoAtual.SL03 (testEstadoAtual.SL03),
+	.\testEstadoAtual.SL04 (testEstadoAtual.SL04),
+	.\testEstadoAtual.SL05 (testEstadoAtual.SL05),
+	.\testEstadoAtual.SL06 (testEstadoAtual.SL06),
+	.\testEstadoAtual.SL07 (testEstadoAtual.SL07),
+	.\testEstadoAtual.SL07a (testEstadoAtual.SL07a),
+	.\testEstadoAtual.SL08 (testEstadoAtual.SL08),
+	.\testEstadoAtual.SL09 (testEstadoAtual.SL09),
+	.\testEstadoAtual.SL09a (testEstadoAtual.SL09a),
+	.\testEstadoAtual.SL10 (testEstadoAtual.SL10),
+	.\testEstadoAtual.SL11 (testEstadoAtual.SL11),
+	.\testEstadoAtual.SL12 (testEstadoAtual.SL12),
+	.\testEstadoAtual.SL12a (testEstadoAtual.SL12a),
+	.\testEstadoAtual.SL13 (testEstadoAtual.SL13),
+	.\testEstadoAtual.SL14 (testEstadoAtual.SL14),
+	.\testEstadoAtual.SL15 (testEstadoAtual.SL15),
+	.\testEstadoAtual.SL16 (testEstadoAtual.SL16),
+	.\testEstadoAtual.SL17 (testEstadoAtual.SL17),
+	.\testEstadoAtual.SL18 (testEstadoAtual.SL18),
+	.\testEstadoAtual.SL19 (testEstadoAtual.SL19),
+	.\testEstadoAtual.SL20 (testEstadoAtual.SL20),
+	.\testEstadoAtual.SL21 (testEstadoAtual.SL21),
+	.\testEstadoAtual.SL22 (testEstadoAtual.SL22),
+	.\testEstadoAtual.SL23 (testEstadoAtual.SL23),
+	.\testEstadoAtual.SL24 (testEstadoAtual.SL24),
+	.\testEstadoAtual.SL25 (testEstadoAtual.SL25),
+	.\testEstadoAtual.SL26 (testEstadoAtual.SL26),
+	.\testEstadoAtual.SL27 (testEstadoAtual.SL27),
+	.\testEstadoAtual.SL27a (testEstadoAtual.SL27a),
+	.\testEstadoAtual.SL28 (testEstadoAtual.SL28),
+	.writee(writee)
+);
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+                                                       
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin                          
+                                                       
+@eachvec;                                              
+// --> end                                             
+end                                                    
+endmodule
+

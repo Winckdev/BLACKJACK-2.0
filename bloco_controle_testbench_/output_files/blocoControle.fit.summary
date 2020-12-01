@@ -1,0 +1,16 @@
+Fitter Status : Successful - Mon Nov 30 15:46:04 2020
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : blocoControle
+Top-level Entity Name : blocoControle
+Family : Cyclone IV E
+Device : EP4CE6E22C6
+Timing Models : Final
+Total logic elements : 36 / 6,272 ( < 1 % )
+    Total combinational functions : 21 / 6,272 ( < 1 % )
+    Dedicated logic registers : 32 / 6,272 ( < 1 % )
+Total registers : 32
+Total pins : 55 / 92 ( 60 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )
