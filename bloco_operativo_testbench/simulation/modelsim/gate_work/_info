@@ -1,0 +1,147 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Arthur/Desktop/blocoOperativo/simulation/modelsim
+Eblackjack_vhd_tst
+Z1 w1606779262
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/Arthur/Desktop/blocoOperativo/simulation/modelsim/blocoOperativo-estimulo-1.vht
+Z5 FC:/Users/Arthur/Desktop/blocoOperativo/simulation/modelsim/blocoOperativo-estimulo-1.vht
+l0
+L31
+VY]1T[mm2YXJ0S1HTA?<B>1
+!s100 J9NAEdHDjlQobB52>bU9]1
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1606779282
+!i10b 1
+Z8 !s108 1606779281.000000
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/Arthur/Desktop/blocoOperativo/simulation/modelsim/blocoOperativo-estimulo-1.vht|
+Z10 !s107 C:/Users/Arthur/Desktop/blocoOperativo/simulation/modelsim/blocoOperativo-estimulo-1.vht|
+!i113 1
+Z11 o-work work
+Z12 tExplicit 1 CvgOpt 0
+Ablackjack_arch
+R2
+R3
+Z13 DEx4 work 17 blackjack_vhd_tst 0 22 Y]1T[mm2YXJ0S1HTA?<B>1
+l78
+L33
+VFz@;HEfAPV@3jlA7THBah0
+!s100 iGdO9`z3Nz71@FNcLZX<E3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eblocooperativo
+Z14 w1606760178
+Z15 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
+Z16 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
+Z17 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z18 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z19 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+R2
+R3
+Z20 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R0
+Z21 8blocoOperativo_6_1200mv_85c_slow.vho
+Z22 FblocoOperativo_6_1200mv_85c_slow.vho
+l0
+L79
+VWXmZYoSn;eFkF=M`R^LVb1
+!s100 ]3o<z4BC>HYDAB0=]@bV=3
+R6
+31
+Z23 !s110 1606779188
+!i10b 1
+Z24 !s108 1606779188.000000
+Z25 !s90 -reportprogress|300|-93|-work|work|blocoOperativo_6_1200mv_85c_slow.vho|
+Z26 !s107 blocoOperativo_6_1200mv_85c_slow.vho|
+!i113 1
+Z27 o-93 -work work
+R12
+Astructure
+R15
+R16
+R17
+R18
+R19
+R2
+R3
+R20
+DEx4 work 14 blocooperativo 0 22 WXmZYoSn;eFkF=M`R^LVb1
+l331
+L148
+Vz=5JPF4HhJ0cXWY<H9hdY0
+!s100 98eR572]b2LH;F8o_PX;a0
+R6
+31
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R27
+R12
+Ehard_block
+R14
+R17
+R15
+R19
+R2
+R3
+R16
+R0
+R21
+R22
+l0
+L34
+VF25TiLjh`DQcC8Z=zbJ?Y3
+!s100 A`ID_i56<Ua56=ZD=[EG=2
+R6
+31
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R27
+R12
+Astructure
+R17
+R15
+R19
+R2
+R3
+R16
+DEx4 work 10 hard_block 0 22 F25TiLjh`DQcC8Z=zbJ?Y3
+l64
+L50
+VZ2P8e]:^NT<7Y7=;nM1Vi3
+!s100 2S?JL;LJ@<3:BHXTNcXS]3
+R6
+31
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R27
+R12
