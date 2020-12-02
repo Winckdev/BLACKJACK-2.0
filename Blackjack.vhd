@@ -239,7 +239,9 @@ entity Blackjack is
 		-- data outputs
 		readdata: out std_logic_vector(dataWidth-1 downto 0);
 		--tests
-		testEstadoAtual: out Estado
+		testEstadoAtual: out Estado;
+		tcmdSetI, tcmdResetI,tcmdSetPontos,tcmdResetPontos, tcmdMultAddress,
+			tcmdMultBaralho, tcmdSetCarta, tcmdResetCarta,  tcmdSetBaralhoI: out std_logic
 		--testRAM_out: out std_logic_vector(dataWidth-1 downto 0);
 		--testCarta_out: out std_logic_vector(dataWidth-1 downto 0);
 		--testI_out: out std_logic_vector(dataWidth-1 downto 0)
@@ -309,6 +311,17 @@ architecture structural of Blackjack is
 	signal sttPontosMaiorDezesseis, sttPontosMaiorVinte,  sttCompBaralho, sttIMenor13: std_logic;
 	
 begin
+	tcmdSetI <= cmdSetI;
+	tcmdResetI <= cmdResetI;
+	tcmdSetPontos <=  cmdSetPontos;
+	tcmdResetPontos <= cmdResetPontos;
+	tcmdMultAddress <= cmdMultAddress;
+	tcmdMultBaralho <= cmdMultBaralho;
+	tcmdSetCarta <= cmdSetCarta;
+	tcmdResetCarta <= cmdResetCarta;
+	tcmdSetBaralhoI <= cmdSetBaralhoI;
+	
+
 	bloco_controle: blocoControle
 		   port map(clk, reset_req, chipselect, readd, writee, addCarta,
 			sttPontosMaiorDezesseis, sttPontosMaiorVinte, sttCompBaralho, sttIMenor13,

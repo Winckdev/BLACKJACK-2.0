@@ -1,8 +1,8 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="e8e2bc0b65f2d4e47f2d"/>
+    <hash md5_digest_80b="8699d612418c24d40f8f"/>
   </project>
   <file_info>
-    <file device="EP4CE6E22C6" path="Blackjack.sof" usercode="0xFFFFFFFF"/>
+    <file device="EP4CE6F17C6" path="Blackjack.sof" usercode="0xFFFFFFFF"/>
   </file_info>
 </sld_project_info>

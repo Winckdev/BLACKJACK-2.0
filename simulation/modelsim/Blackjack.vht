@@ -31,6 +31,12 @@ USE ieee.std_logic_1164.all;
 ENTITY Blackjack_vhd_tst IS
 END Blackjack_vhd_tst;
 ARCHITECTURE Blackjack_arch OF Blackjack_vhd_tst IS
+--type Estado is (
+		--SL00 ,SL01, SL01a, SL02, SL03, SL04, SL05, SL06, SL07, SL07a, SL08, 
+		--SL09, SL09a, SL10, SL11, SL12, SL12a, SL13, SL14, SL15, 
+		--SL16, SL17, SL18, SL19, SL20, SL21, SL22, SL23, SL24, SL25, SL26, SL27, SL27a, SL28
+	--); 
+
 -- constants
 constant PERIODO : time := 10 ns;                                                 
 -- signals                                                   
@@ -45,8 +51,8 @@ SIGNAL reset_req : STD_LOGIC;
 SIGNAL writedata : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL writee : STD_LOGIC;
 --SIGNAL testEstadoAtual: Estado;
-
-
+SIGNAL tcmdSetI, tcmdResetI,tcmdSetPontos,tcmdResetPontos, tcmdMultAddress,
+			tcmdMultBaralho, tcmdSetCarta, tcmdResetCarta,  tcmdSetBaralhoI: std_logic;
 
 COMPONENT Blackjack
 	PORT (
@@ -59,8 +65,10 @@ COMPONENT Blackjack
 	readdata : BUFFER STD_LOGIC_VECTOR(7 DOWNTO 0);
 	reset_req : IN STD_LOGIC;
 	writedata : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-	writee : IN STD_LOGIC
-	--testEstadoAtual: BUFFER STD_LOGIC_VECTOR(7 downto 0)
+	writee : IN STD_LOGIC;
+	--testEstadoAtual: BUFFER Estado;
+	tcmdSetI, tcmdResetI,tcmdSetPontos,tcmdResetPontos, tcmdMultAddress,
+			tcmdMultBaralho, tcmdSetCarta, tcmdResetCarta: BUFFER std_logic
 	);
 END COMPONENT;
 BEGIN
@@ -80,7 +88,15 @@ BEGIN
 	readdata => readdata,
 	reset_req => reset_req,
 	writedata => writedata,
-	writee => writee
+	writee => writee,
+	tcmdSetI => tcmdSetI,
+	tcmdResetI => tcmdResetI,
+	tcmdSetPontos => tcmdSetPontos,
+	tcmdResetPontos => tcmdResetPontos,
+	tcmdMultAddress => tcmdMultAddress,
+	tcmdMultBaralho => tcmdMultBaralho,
+	tcmdSetCarta => tcmdSetCarta,
+	tcmdResetCarta => tcmdResetCarta
 	--testEstadoAtual => testEstadoAtual
 	);
 init : PROCESS                                               

@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Arthur/Desktop/BLACKJACK-2.0/simulation/modelsim
 Eblackjack
-Z1 w1606766860
+Z1 w1606940204
 Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 g8;l:a_bzlE?3R3d7zk3Z0
 Z3 DPx10 cycloneive 21 cycloneive_components 0 22 Yj^f[Ven<H;0LiK:6PWEg0
 Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -23,13 +23,13 @@ Z10 8Blackjack.vho
 Z11 FBlackjack.vho
 l0
 L79
-VAjZVJmRc2a_8ijA5GIV[J0
-!s100 ffHkWRYi<QBU`<jBMYJIg3
+VgIHVlVVzaMbPHG;U2WP9Z1
+!s100 6LAkL;iDZ=Rh^zkZg@TBE3
 Z12 OV;C;10.5b;63
 31
-Z13 !s110 1606771323
+Z13 !s110 1606940211
 !i10b 1
-Z14 !s108 1606771323.000000
+Z14 !s108 1606940211.000000
 Z15 !s90 -reportprogress|300|-93|-work|work|Blackjack.vho|
 Z16 !s107 Blackjack.vho|
 !i113 1
@@ -44,11 +44,11 @@ R6
 R7
 R8
 R9
-DEx4 work 9 blackjack 0 22 AjZVJmRc2a_8ijA5GIV[J0
-l480
-L194
-VD92S8?LU0@`ze@@4SAKgg3
-!s100 ;_kf9WIkooQcH]kPebYdS1
+DEx4 work 9 blackjack 0 22 gIHVlVVzaMbPHG;U2WP9Z1
+l522
+L212
+VcQUVD;LgC`L]nAB[o<26R2
+!s100 A3>iY<7hbb5@Y?gjTAB@>0
 R12
 31
 R13
@@ -60,7 +60,7 @@ R16
 R17
 R18
 Eblackjack_vhd_tst
-Z19 w1606771351
+Z19 w1606940375
 R7
 R8
 R0
@@ -72,9 +72,9 @@ VY]1T[mm2YXJ0S1HTA?<B>1
 !s100 J9NAEdHDjlQobB52>bU9]1
 R12
 32
-Z22 !s110 1606771362
+Z22 !s110 1606940379
 !i10b 1
-Z23 !s108 1606771361.000000
+Z23 !s108 1606940379.000000
 Z24 !s90 -reportprogress|300|-work|work|C:/Users/Arthur/Desktop/BLACKJACK-2.0/simulation/modelsim/Blackjack.vht|
 Z25 !s107 C:/Users/Arthur/Desktop/BLACKJACK-2.0/simulation/modelsim/Blackjack.vht|
 !i113 1
@@ -84,10 +84,10 @@ Ablackjack_arch
 R7
 R8
 DEx4 work 17 blackjack_vhd_tst 0 22 Y]1T[mm2YXJ0S1HTA?<B>1
-l66
+l74
 L33
-Vg9Oh7JBM44Q?d8PAPmF412
-!s100 ?]Ym`mf5e0<^3BBW3ig1A3
+VzI:ZSG?TBGn4DheE15Dj:1
+!s100 MmZjK^bGHLMdkAG4]`K650
 R12
 32
 R22
