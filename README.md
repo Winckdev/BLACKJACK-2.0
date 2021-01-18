@@ -2,6 +2,8 @@
 
 Projeto de Sistemas Digitas 2020.1
 
+Sistema feito em VHDL
+
 O Sistema busca simular uma partida de Blackjack, nele é possível tentar alcançar os 21 pontos sem passar do limite. É possível receber cartas, parar de receber cartas e
 checar sua pontuação
 
